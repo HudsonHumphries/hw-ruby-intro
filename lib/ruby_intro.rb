@@ -44,14 +44,27 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+  return "Hello, "+name
 end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
+  if /[aeiouAEIOU*]/.match(s[0])
+    return false
+  elsif s.length == 0
+    return false
+  elsif /\W+/.match(s[0])
+    return false
+  else
+    return true
+  end
 end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  return true if s == "0"
+  /^[10]*00$/.match(s) != nil
+
 end
 
 # Part 3
